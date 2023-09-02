@@ -1209,7 +1209,7 @@ catalog__right-part-content {
 .tooltip {
   display: inline-block;
   padding-right: 2px;
-  vertical-align: bottom;
+  vertical-align: middle;
   font-size: 0;
   cursor: pointer;
 }
@@ -2037,6 +2037,7 @@ catalog__right-part-content {
     top: 0;
     bottom: 0;
     max-width: none;
+    z-index: 65;
     align-items: center;
   }
 
@@ -2292,7 +2293,7 @@ catalog__right-part-content {
   .header__menu-wrapper {
     padding-top: 46px;
     padding-left: 15px;
-    padding-bottom: 26px;
+    padding-bottom: 70px;
   }
 
   .header__entry-link {
@@ -2576,11 +2577,19 @@ catalog__right-part-content {
     width: 50px;
     height: 50px;
   }
+
+  .map {
+    height: 320px;
+  }
 }
 
 @media (max-width: 320px) {
   .disappearing-text {
     display: none;
+  }
+
+  .header__menu-wrapper {
+    padding-bottom: 26px;
   }
 
   .wrapper-block {
@@ -2667,10 +2676,6 @@ catalog__right-part-content {
 
   .projects__img_partner_esad {
     width: 99px;
-  }
-
-  .map {
-    height: 320px;
   }
 }
 
@@ -2769,12 +2774,12 @@ catalog__right-part-content {
     opacity: 1;
   }
 
-  .projects__img-link:hover .projects__img{
+  .projects__img-link:hover .projects__img {
     filter: grayscale(0);
     opacity: 1;
   }
 
-  .projects__button:hover path{
+  .projects__button:hover path {
     fill: #D1A9F0;
   }
 
@@ -2849,6 +2854,10 @@ catalog__right-part-content {
   background: #7943A4;
 }
 
+.choices:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .galery__label:active .galery__span {
   border-color: #C283F3;
 }
@@ -2866,11 +2875,11 @@ catalog__right-part-content {
   fill: #7943A4;
 }
 
-.galery__slide:active::after {
+.galery__slide:active::after, .galery__slide:active::before {
   opacity: 1;
 }
 
-.catalog__list-item:active .catalog__subtitle {
+.catalog__list-item:active:not(:focus-visible) .catalog__subtitle {
   color: #7943A4;
 }
 
@@ -2887,6 +2896,10 @@ catalog__right-part-content {
   outline-offset: -2px;
 }
 
+.catalog__list-item:active .catalog__svg path {
+  fill: #D1A9F0;
+}
+
 .article__link:active {
   color: #333;
 }
@@ -2898,6 +2911,10 @@ catalog__right-part-content {
 .events__button:active {
   outline: 2px solid #9D5CD0;
   outline-offset: -2px;
+}
+
+.events__button:active path {
+  fill: #D1A9F0;
 }
 
 .tooltip:active .tooltip__svg path:first-child {
@@ -2921,12 +2938,22 @@ catalog__right-part-content {
   border-color: #9d5cd0;
 }
 
+.projects__img-link:active .projects__img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
 .projects__button:not(.swiper-button-disabled):active {
   outline: 2px solid #9D5CD0;
   outline-offset: -2px;
 }
 
+.projects__button:not(.swiper-button-disabled):active path {
+  fill: #D1A9F0;
+}
+
 .contacts__btn:active {
+  color: #fff;
   outline: 3px solid #D1A9F0;
   outline-offset: -3px;
   background: #7943A4;
