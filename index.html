@@ -339,24 +339,30 @@
           </select>
           <ul class="galery__list list-reset">
             <li class="galery__list-item">
-              <label class="galery__label text" tabindex="0">
+              <label class="galery__label text">
                 <input type="checkbox" class="galery__checkbox">
                 <span class="galery__span"></span>
-                XIX век
+                <span class="galery__checkbox-text">
+                  XIX век
+                </span>
               </label>
             </li>
             <li class="galery__list-item">
-              <label class="galery__label text" tabindex="0">
+              <label class="galery__label text">
                 <input type="checkbox" class="galery__checkbox">
                 <span class="galery__span"></span>
-                XX&nbsp;век
+                <span class="galery__checkbox-text">
+                  XX&nbsp;век
+                </span>
               </label>
             </li>
             <li class="galery__list-item">
-              <label class="galery__label text" tabindex="0">
+              <label class="galery__label text">
                 <input type="checkbox" class="galery__checkbox">
                 <span class="galery__span"></span>
-                Современность
+                <span class="galery__checkbox-text">
+                  Современность
+                </span>
               </label>
             </li>
           </ul>
@@ -743,7 +749,7 @@
                     <source srcset="img/article__1_768.jpg" media="(max-width: 768px)">
                     <source srcset="img/article__1.jpg" media="(max-width: 992px)">
                     <source srcset="img/article__1_1024.jpg" media="(max-width: 1024px)">
-                    <img src="img/article__1.jpg" alt="" class="article__img">
+                    <img src="img/article__1.jpg" alt="Книжная гравюра" class="article__img">
                   </picture>
                   <div class="article__text-content article__text-content_paddings_other flex">
                     <span class="article__address article__span">Музей им. Щусева</span>
@@ -764,7 +770,7 @@
                     <source srcset="img/article__2_768.jpg" media="(max-width: 768px)">
                     <source srcset="img/article__2.jpg" media="(max-width: 992px)">
                     <source srcset="img/article__2_1024.jpg" media="(max-width: 1024px)">
-                    <img src="img/article__2.jpg" alt="" class="article__img">
+                    <img src="img/article__2.jpg" alt="Дмитрий Петров и Сергей Ильин" class="article__img">
                   </picture>
                   <div class="article__text-content flex">
                     <span class="article__address article__span">ММОМА</span>
@@ -785,7 +791,7 @@
                     <source srcset="img/article__3_768.jpg" media="(max-width: 768px)">
                     <source srcset="img/article__3.jpg" media="(max-width: 992px)">
                     <source srcset="img/article__3_1024.jpg" media="(max-width: 1024px)">
-                    <img src="img/article__3.jpg" alt="" class="article__img">
+                    <img src="img/article__3.jpg" alt="Еврейский музей" class="article__img">
                   </picture>
                   <div class="article__text-content flex">
                     <span class="article__address article__span">Еврейский музей</span>
@@ -806,7 +812,7 @@
                     <source srcset="img/article__4_768.jpg" media="(max-width: 768px)">
                     <source srcset="img/article__4.jpg" media="(max-width: 992px)">
                     <source srcset="img/article__4_1024.jpg" media="(max-width: 1024px)">
-                    <img src="img/article__4.jpg" alt="" class="article__img">
+                    <img src="img/article__4.jpg" alt="Пример работы Джона Винзора" class="article__img">
                   </picture>
                   <div class="article__text-content flex">
                     <span class="article__address article__span">ММАМ</span>
@@ -827,7 +833,7 @@
                     <source srcset="img/article__5_768.jpg" media="(max-width: 768px)">
                     <source srcset="img/article__5.jpg" media="(max-width: 992px)">
                     <source srcset="img/article__5_1024.jpg" media="(max-width: 1024px)">
-                    <img src="img/article__5.jpg" alt="" class="article__img">
+                    <img src="img/article__5.jpg" alt="Молодое искусство" class="article__img">
                   </picture>
                   <div class="article__text-content flex">
                     <span class="article__address article__span">Третьяковка на&nbsp;Крымском валу</span>
@@ -841,14 +847,22 @@
                 </article>
               </li>
             </ul>
-            <svg class="events__button events__button-prev" tabindex="0" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M25 2.72191e-06C38.8071 2.11838e-06 50 11.1929 50 25C50 38.8071 38.8071 50 25 50C11.1929 50 -4.89256e-07 38.8071 -1.09278e-06 25C-1.69631e-06 11.1929 11.1929 3.32544e-06 25 2.72191e-06Z" fill="#ECECEC"/>
-              <path d="M23.3333 16.6667L31.6667 25L23.3333 33.3333" stroke="black"/>
-            </svg>
-            <svg class="events__button events__button-next" tabindex="0" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M25 2.72191e-06C38.8071 2.11838e-06 50 11.1929 50 25C50 38.8071 38.8071 50 25 50C11.1929 50 -4.89256e-07 38.8071 -1.09278e-06 25C-1.69631e-06 11.1929 11.1929 3.32544e-06 25 2.72191e-06Z" fill="#ECECEC"/>
-              <path d="M23.3333 16.6667L31.6667 25L23.3333 33.3333" stroke="black"/>
-            </svg>
+            <div class="events__svg-wrapper events__svg-wrapper_order_prev">
+              <button class="events__btn events__btn-prev btn-reset">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M25 2.72191e-06C38.8071 2.11838e-06 50 11.1929 50 25C50 38.8071 38.8071 50 25 50C11.1929 50 -4.89256e-07 38.8071 -1.09278e-06 25C-1.69631e-06 11.1929 11.1929 3.32544e-06 25 2.72191e-06Z" fill="#ECECEC"/>
+                  <path d="M23.3333 16.6667L31.6667 25L23.3333 33.3333" stroke="black"/>
+                </svg>
+              </button>
+            </div>
+            <div class="events__svg-wrapper events__svg-wrapper_order_next">
+              <button class="events__btn events__btn-next btn-reset">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M25 2.72191e-06C38.8071 2.11838e-06 50 11.1929 50 25C50 38.8071 38.8071 50 25 50C11.1929 50 -4.89256e-07 38.8071 -1.09278e-06 25C-1.69631e-06 11.1929 11.1929 3.32544e-06 25 2.72191e-06Z" fill="#ECECEC"/>
+                  <path d="M23.3333 16.6667L31.6667 25L23.3333 33.3333" stroke="black"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -931,14 +945,22 @@
                 </a>
               </li>
             </ul>
-            <svg class="projects__button projects__button-prev" tabindex="0" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="#ECECEC"/>
-              <path d="M16 20L11 15L16 10" stroke="black"/>
-            </svg>
-            <svg class="projects__button projects__button-next" tabindex="0" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="#ECECEC"/>
-              <path d="M14 20L19 15L14 10" stroke="black"/>
-            </svg>
+            <div class="projects__btn-wrapper projects__btn-wrapper_order_prev">
+              <button class="projects__btn projects__btn-prev btn-reset">
+                <svg class="projects__button projects__button-prev" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="#ECECEC"/>
+                  <path d="M16 20L11 15L16 10" stroke="black"/>
+                </svg>
+              </button>
+            </div>
+            <div class="projects__btn-wrapper projects__btn-wrapper_order_next">
+              <button class="projects__btn projects__btn-next btn-reset">
+                <svg class="projects__button projects__button-next" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="#ECECEC"/>
+                  <path d="M14 20L19 15L14 10" stroke="black"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -960,7 +982,7 @@
             <button class="contacts__btn btn-reset" type="submit">Заказать <span class="disappearing-text">обратный звонок</span></button>
           </form>
           <div class="contacts__right-part-wrapper">
-            <span class="contacts__span bold-text">Связаться в&nbsp;один клик</span>
+            <h3 class="contacts__subtitle bold-text">Связаться в&nbsp;один клик</h3>
             <ul class="contacts__social-networks list-reset flex">
               <li class="contacts__list-item">
                 <a href="#" class="contacts__link" aria-label="вацап">

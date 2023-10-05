@@ -91,6 +91,7 @@ const swiper = new Swiper('.galery__swiper', {
 const accordion = new Accordion('.accordion-container', {
   showMultiple: true,
   collapse: true,
+  openOnInit: [0],
 });
 
 const eventsSwiper = new Swiper('.events__swiper', {
@@ -98,8 +99,8 @@ const eventsSwiper = new Swiper('.events__swiper', {
   slidesPerGroup: 1,
 
   navigation: {
-    nextEl: '.events__button-next',
-    prevEl: '.events__button-prev',
+    nextEl: '.events__btn-next',
+    prevEl: '.events__btn-prev',
   },
 
   pagination: {
@@ -146,8 +147,8 @@ const partnerSwiper = new Swiper('.projects__swiper', {
   slidesPerGroup: 1,
 
   navigation: {
-    nextEl: '.projects__button-next',
-    prevEl: '.projects__button-prev',
+    nextEl: '.projects__btn-next',
+    prevEl: '.projects__btn-prev',
   },
 
   a11y: {
