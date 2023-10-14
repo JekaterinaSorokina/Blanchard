@@ -703,6 +703,7 @@ body {
   cursor: pointer;
 }
 .galery__checkbox {
+  position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
